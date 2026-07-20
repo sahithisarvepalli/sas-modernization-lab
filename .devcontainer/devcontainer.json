@@ -1,0 +1,56 @@
+{
+  "name": "SAS Modernization Lab",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspaces/sas-modernization-lab",
+  "initializeCommand": ["bash", ".devcontainer/pre-init.sh"],
+  "remoteEnv": {
+    "PYTHONPATH": "/workspaces/sas-modernization-lab"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "charliermarsh.ruff",
+        "GitHub.copilot",
+        "eamodio.gitlens",
+        "ms-vscode.vscode-markdownlint",
+        "redhat.vscode-yaml",
+        "timonwong.shellcheck",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": true,
+            "source.organizeImports.ruff": true
+          }
+        },
+        "[yaml]": {
+          "editor.defaultFormatter": "redhat.vscode-yaml",
+          "editor.formatOnSave": true
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "ms-vscode.vscode-markdownlint",
+          "editor.formatOnSave": true,
+          "editor.wordWrap": "on"
+        },
+        "editor.rulers": [100],
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+    "GitHub.copilot",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "timonwong.shellcheck"
+  ]
+}

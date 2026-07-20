@@ -1,19 +1,62 @@
 # SAS Modernization Lab
 
-A portfolio repository to demonstrate advanced SAS programming, Mainframe-to-cloud modernization, and SAS + Python interoperability for insurance and finance use cases.
+A portfolio repository for advanced SAS programming, modernization patterns,
+and SAS + Python interoperability for insurance and finance workflows.
 
-## Objectives
-- Deepen advanced SAS expertise (macro frameworks, PROC SQL tuning, data quality patterns)
-- Simulate legacy SAS modernization into cloud-ready patterns
-- Demonstrate SAS interoperability with Python and API-driven workflows
+## What this bootstrap adds
 
-## Planned Modules
-1. Hybrid Risk Modeling (SAS + Python)
-2. Mainframe-to-Cloud Refactoring Simulation
-3. Financial API ETL & Reporting Outputs
+This branch bootstraps the repository so pull requests immediately run CI
+checks, validate SAS guardrails, and open cleanly in a VS Code dev container.
 
-## Repository Status
-Bootstrap in progress.
+### Reused from `insurance-analytics-project`
 
-## Agent PR Diagnostics
-This update adds a concrete repository change to validate branch push and pull request creation flow from the Copilot task environment.
+- `pyproject.toml` + `requirements.txt` dual dependency strategy
+- Makefile-driven developer workflow (`make lint`, `make test`,
+  `make validate`)
+- Devcontainer bootstrap pattern with Dockerfile + `setup.sh`
+- GitHub Actions convention to install Python dependencies then run Make
+  targets
+- VS Code Python/Ruff/Markdown/YAML editor defaults
+
+### Adapted for SAS modernization lab
+
+- SAS-specific repository layout under `src/sas`, `src/macros`, and
+  `pipelines`
+- SAS static checks for headers, risky shell execution, and absolute
+  `libname` paths
+- Repo guardrails for required docs/folders and secret-pattern scanning
+- Minimal Python interoperability entrypoint and scaffold tests
+
+## Quick start
+
+```bash
+make install
+make lint
+make test
+make validate
+```
+
+## Repository layout
+
+- `src/sas/` — SAS module scaffolds
+- `src/macros/` — shared SAS macros
+- `src/python/` — Python interop helpers
+- `pipelines/` — orchestration placeholders
+- `docs/` — architecture, migration, runbook, roadmap, branching guidance
+- `config/` — local configuration examples
+- `tests/` — bootstrap smoke tests
+
+## Active quality gates
+
+- Python linting with Ruff
+- Markdown linting with markdownlint
+- YAML validation with pre-commit
+- Shell script linting with ShellCheck
+- SAS static checks for headers and risky patterns
+- Repo guardrails for required docs and folders
+
+## Next implementation areas
+
+1. Module A — advanced SAS macro + PROC SQL patterns
+2. Module B — legacy modernization simulation workflows
+3. Module C — API reporting and SAS/Python interop expansion

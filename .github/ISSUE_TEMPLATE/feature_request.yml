@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a new SAS modernization capability or workflow
+labels: [enhancement]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What capability should be added?
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Expected value
+      description: What problem does this solve for the lab?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Reference modules, modernization scenarios, or external tooling.
