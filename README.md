@@ -14,3 +14,6 @@ A portfolio repository to demonstrate advanced SAS programming, Mainframe-to-clo
 
 ## Repository Status
 Bootstrap in progress.
+
+## Agent PR Diagnostics
+This update adds a concrete repository change to validate branch push and pull request creation flow from the Copilot task environment.
