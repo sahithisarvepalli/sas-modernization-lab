@@ -102,8 +102,9 @@ class ViyaClient:
     # ── Generic request helpers ───────────────────────────────────────────────
 
     def _auth_headers(self) -> dict[str, str]:
-        token = self._token or ""
-        bearer = "Bearer " + token
+        if not self._token:
+            self.authenticate()
+        bearer = "Bearer " + (self._token or "")
         return {
             "Authorization": bearer,
             "Accept": "application/json",
