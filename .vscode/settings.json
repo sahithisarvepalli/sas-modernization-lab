@@ -1,4 +1,12 @@
 {
+  "SAS.session.profiles": {},
+  "SAS.session.currentProfile": "",
+  "[sas]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": false,
+    "editor.rulers": [100]
+  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
@@ -8,5 +16,14 @@
     }
   },
   "ruff.enable": true,
-  "ruff.lint.enable": true
+  "ruff.lint.enable": true,
+  "files.associations": {
+    "*.sas": "sas",
+    "*.sas7bdat": "binary",
+    "sascfg_personal.py": "python"
+  },
+  "files.exclude": {
+    "**/*.sas7bdat": true,
+    "**/*.lst": true
+  }
 }

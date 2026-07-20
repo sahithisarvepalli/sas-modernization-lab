@@ -1,0 +1,49 @@
+# sascfg_personal.py — SASPy connection configuration
+#
+# Copy this file to config/sascfg_personal.py and fill in your environment details.
+# sascfg_personal.py is gitignored; never commit real credentials.
+#
+# Full reference: https://sassoftware.github.io/saspy/install.html#configuration
+#
+# SASPy will load this file when SASPY_CFG env var points at it, or when it is
+# placed in the saspy package directory.  The SAS_config_names list controls
+# which profiles are available; SAS_config_options selects the default.
+
+SAS_config_names = ["default", "iom_workspace", "http_viya"]
+
+SAS_config_options = {
+    # Set to the name you pass to saspy.SASsession(cfgname='...')
+    "lock_down": False,
+    "verbose": True,
+    "prompt": True,
+}
+
+# ── IOM access mode ─────────────────────────────────────────────────────────
+# Traditional SAS Workspace Server (on-prem or SAS Grid).
+# Requires the SASPy Java bridge (Java 8+ on PATH) and SAS Integration
+# Technologies client libraries.
+iom_workspace = {
+    "access": "iom",
+    "iomhost": "sas-server.example.com",
+    "iomport": 8591,
+    "encoding": "utf-8",
+    # Omit username/password here; SASPy will prompt or use Kerberos.
+    # "omruser": "your_user",
+    # "omrpw": "your_password",
+}
+
+# ── HTTP access mode (SAS Viya) ─────────────────────────────────────────────
+# Connects to a SAS Viya Compute Service over HTTPS.  No Java needed.
+# Preferred for SAS Viya 3.5+ and SAS Viya 4 (SAS Cloud / Kubernetes).
+http_viya = {
+    "access": "http",
+    "url": "https://your-viya-server.example.com",
+    "context": "SAS Studio compute context",
+    # Supply a bearer token or let SASPy use the OAuth flow.
+    # "authtoken": "your_bearer_token",
+    "verify": True,  # set to False only for self-signed certs in dev
+}
+
+# ── Default profile ──────────────────────────────────────────────────────────
+# Points to whichever profile is your daily driver.
+default = iom_workspace

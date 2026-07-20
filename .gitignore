@@ -5,3 +5,18 @@ __pycache__/
 .coverage
 *.egg-info/
 .venv/
+
+# SASPy personal config — contains credentials, never commit
+config/sascfg_personal.py
+config/.authinfo
+
+# SAS data and output artifacts
+*.sas7bdat
+*.sas7bndx
+*.sas7bcat
+*.lst
+*.sas.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*.ipynb

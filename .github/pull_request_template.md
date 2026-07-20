@@ -2,9 +2,20 @@
 
 ## Summary
 
-## Files replicated from insurance-analytics-project
+## Type of change
 
-## Files adapted for SAS modernization lab
+- [ ] SAS macro / program addition or update
+- [ ] SASPy / Python interop change
+- [ ] SAS Viya workflow addition
+- [ ] CI / guardrail / tooling change
+- [ ] Documentation update
+
+## SAS-specific checklist
+
+- [ ] All new `.sas` files include the required header block (`Purpose:`, `Inputs:`, `Outputs:`, `Usage:`)
+- [ ] No hardcoded absolute `libname` paths
+- [ ] No risky shell-execution patterns (`x` command, `systask`, `filename pipe`)
+- [ ] SASPy / Viya credentials read from environment — no secrets in code
 
 ## Validation
 

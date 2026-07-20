@@ -6,16 +6,19 @@
   "workspaceFolder": "/workspaces/sas-modernization-lab",
   "initializeCommand": ["bash", ".devcontainer/pre-init.sh"],
   "remoteEnv": {
-    "PYTHONPATH": "/workspaces/sas-modernization-lab"
+    "PYTHONPATH": "/workspaces/sas-modernization-lab",
+    "SASPY_CFG": "/workspaces/sas-modernization-lab/config/sascfg_personal.py"
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
+        "SAS.sas-lsp",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "charliermarsh.ruff",
+        "ms-toolsai.jupyter",
         "GitHub.copilot",
         "eamodio.gitlens",
         "ms-vscode.vscode-markdownlint",
@@ -27,6 +30,14 @@
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.testing.pytestEnabled": true,
         "python.testing.unittestEnabled": false,
+        "SAS.session.profiles": {},
+        "SAS.session.currentProfile": "",
+        "[sas]": {
+          "editor.tabSize": 4,
+          "editor.insertSpaces": true,
+          "editor.formatOnSave": false,
+          "editor.rulers": [100]
+        },
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff",
           "editor.formatOnSave": true,
@@ -43,6 +54,14 @@
           "editor.defaultFormatter": "ms-vscode.vscode-markdownlint",
           "editor.formatOnSave": true,
           "editor.wordWrap": "on"
+        },
+        "files.associations": {
+          "*.sas": "sas",
+          "sascfg_personal.py": "python"
+        },
+        "files.exclude": {
+          "**/*.sas7bdat": true,
+          "**/*.lst": true
         },
         "editor.rulers": [100],
         "files.trimTrailingWhitespace": true,
