@@ -21,7 +21,7 @@ clean:
 lint:
 	ruff check src tests scripts
 	@if command -v markdownlint >/dev/null 2>&1; then \
-		markdownlint README.md CONTRIBUTING.md docs/**/*.md .github/pull_request_template.md; \
+		markdownlint README.md CONTRIBUTING.md $$(find docs -name '*.md' -print) .github/pull_request_template.md pipelines/README.md; \
 	else \
 		echo "markdownlint not found; install via devcontainer or npm"; \
 		exit 1; \

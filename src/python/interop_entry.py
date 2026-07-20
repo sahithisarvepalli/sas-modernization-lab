@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-
 MODULE_ROOTS = [
     Path("src/sas/module_a_advanced_core"),
     Path("src/sas/module_b_modernization_simulation"),

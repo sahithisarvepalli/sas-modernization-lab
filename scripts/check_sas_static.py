@@ -7,7 +7,9 @@ import sys
 from pathlib import Path
 
 REQUIRED_HEADERS = ("Purpose:", "Inputs:", "Outputs:", "Usage:")
-ABSOLUTE_LIBNAME_PATTERN = re.compile(r"^\s*libname\s+\w+\s+['\"](/|[A-Za-z]:\\)", re.IGNORECASE | re.MULTILINE)
+ABSOLUTE_LIBNAME_PATTERN = re.compile(
+    r"^\s*libname\s+\w+\s+['\"](/|[A-Za-z]:\\)", re.IGNORECASE | re.MULTILINE
+)
 RISKY_EXECUTION_PATTERNS = {
     "x command": re.compile(r"^\s*x\s+['\"]", re.IGNORECASE | re.MULTILINE),
     "systask": re.compile(r"\bsystask\b", re.IGNORECASE),

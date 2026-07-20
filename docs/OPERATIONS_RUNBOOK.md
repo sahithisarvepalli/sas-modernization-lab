@@ -18,6 +18,7 @@ make validate
 ## Incident response
 
 If CI fails:
+
 1. Re-run the failing command locally.
 2. Fix the specific scaffold or guardrail issue.
 3. Update docs if operating steps changed.

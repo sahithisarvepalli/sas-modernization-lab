@@ -10,11 +10,13 @@
 ## Development environment
 
 - Preferred setup: open the repository in the included dev container.
-- Install hooks with `pre-commit install --install-hooks` if you are not using the dev container.
+- Install hooks with `pre-commit install --install-hooks` if you are not using
+  the dev container.
 
 ## Pull requests
 
 Use the PR template and capture:
+
 - what was replicated from the reference repo
 - what was adapted for SAS modernization lab
 - command results for lint/test/validate

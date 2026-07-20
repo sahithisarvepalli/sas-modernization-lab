@@ -8,4 +8,5 @@ The lab uses a lightweight bootstrap architecture:
 - `pipelines/` for orchestration entrypoints
 - GitHub Actions for CI, SAS static analysis, and repo guardrails
 
-This scaffold is intentionally additive and keeps runtime assumptions minimal while module implementations are built out.
+This scaffold is intentionally additive and keeps runtime assumptions minimal
+while module implementations are built out.
