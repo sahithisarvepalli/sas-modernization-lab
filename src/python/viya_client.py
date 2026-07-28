@@ -155,15 +155,11 @@ class ViyaClient:
         ctx = next((c for c in contexts if c.get("name") == context_name), None)
         if ctx is None:
             available = [c.get("name") for c in contexts]
-            raise ValueError(
-                f"Compute context {context_name!r} not found.  Available: {available}"
-            )
+            raise ValueError(f"Compute context {context_name!r} not found.  Available: {available}")
         context_id = ctx["id"]
         return self.post(f"/compute/contexts/{context_id}/sessions", payload={})
 
-    def submit_compute_job(
-        self, session_id: str, sas_code: str
-    ) -> dict[str, Any]:
+    def submit_compute_job(self, session_id: str, sas_code: str) -> dict[str, Any]:
         """Submit SAS code to an active Compute session.
 
         Parameters

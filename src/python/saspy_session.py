@@ -73,9 +73,7 @@ def get_sas_session(
         When the SAS server is unreachable.
     """
     if not _SASPY_AVAILABLE:
-        raise ImportError(
-            "saspy is not installed.  Run: pip install saspy"
-        )
+        raise ImportError("saspy is not installed.  Run: pip install saspy")
 
     resolved_cfgname = cfgname or os.environ.get("SASPY_CFGNAME", "default")
     cfg_path = os.environ.get("SASPY_CFG")
