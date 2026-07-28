@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "SAS.sas-lsp",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "ms-toolsai.jupyter",
+    "GitHub.copilot",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-markdownlint",
+    "redhat.vscode-yaml",
+    "timonwong.shellcheck",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

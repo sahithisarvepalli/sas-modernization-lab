@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make lint",
+      "type": "shell",
+      "command": "make lint",
+      "group": "test"
+    },
+    {
+      "label": "make test",
+      "type": "shell",
+      "command": "make test",
+      "group": "test"
+    },
+    {
+      "label": "make validate",
+      "type": "shell",
+      "command": "make validate",
+      "group": "test"
+    }
+  ]
+}

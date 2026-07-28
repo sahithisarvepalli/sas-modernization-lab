@@ -1,0 +1,30 @@
+name: Repo Guardrails
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  repo-guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify required structure and docs
+        run: python scripts/check_repo_guardrails.py
+
+      - name: Secret pattern grep
+        run: |
+          if git ls-files | grep -Ev '^config/\.env\.example$' | xargs grep -nE '(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{36}|AIza[0-9A-Za-z_-]{35})'; then
+            echo 'Potential secret pattern detected.'
+            exit 1
+          fi

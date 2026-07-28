@@ -1,0 +1,14 @@
+pytest>=8.0.0,<9.0.0
+pytest-cov>=4.1.0,<5.0.0
+pyyaml>=6.0.0,<7.0.0
+ruff>=0.5.0,<1.0.0
+pre-commit>=3.7.0,<4.0.0
+# SASPy: SAS/Python bridge (IOM, HTTP, and COM access modes)
+saspy>=5.0.0
+# python-swat: SAS Viya CAS (Cloud Analytic Services) client
+swat>=1.14.0
+# Data science stack required for SASPy DataFrame interchange
+pandas>=2.0.0
+numpy>=1.26.0
+# HTTP client for SAS Viya REST API workflows
+requests>=2.31.0
