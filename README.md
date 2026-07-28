@@ -51,7 +51,7 @@ credentials.
 ## Repository layout
 
 | Path | Purpose |
-|------|---------|
+| ---- | ------- |
 | `src/sas/` | SAS module programs (one subdirectory per module) |
 | `src/macros/` | Shared SAS macros (logging, validation, utilities) |
 | `src/python/` | SASPy session helper, SAS Viya REST client, interop entry |
@@ -64,7 +64,7 @@ credentials.
 ## Python interoperability packages
 
 | Package | Purpose |
-|---------|---------|
+| ------- | ------- |
 | [`saspy`](https://github.com/sassoftware/saspy) | SAS/Python bridge — IOM (on-prem), HTTP (SAS Viya), COM (Windows) |
 | [`python-swat`](https://github.com/sassoftware/python-swat) | SAS Viya CAS (Cloud Analytic Services) — in-memory analytics |
 | `pandas` / `numpy` | DataFrame interchange with SASPy |
@@ -85,4 +85,3 @@ credentials.
 1. **Module A** — advanced SAS macro framework and PROC SQL optimization patterns
 2. **Module B** — legacy modernization simulation (mainframe-to-SAS handoffs)
 3. **Module C** — SAS Viya REST API reporting and SASPy interop expansion
-

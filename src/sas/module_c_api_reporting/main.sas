@@ -7,9 +7,16 @@ Usage: %include "src/macros/logging.sas"; %include "src/sas/module_c_api_reporti
 %include "src/macros/logging.sas";
 
 %log_message(message=Module C API reporting started, severity=INFO, module_name=module_c_api_reporting);
+
+/* Allow the caller to supply the endpoint URL via a macro variable;
+   fall back to the example echo service only if no URL is configured. */
+%if not %symexist(module_c_api_url) %then %do;
+    %let module_c_api_url = https://postman-echo.com/get?source=sas-modernization-lab;
+%end;
+
 filename response temp;
 proc http
-    url="https://postman-echo.com/get?source=sas-modernization-lab"
+    url="&module_c_api_url."
     method="GET"
     out=response;
 run;

@@ -12,7 +12,8 @@
 
 ## SAS-specific checklist
 
-- [ ] All new `.sas` files include the required header block (`Purpose:`, `Inputs:`, `Outputs:`, `Usage:`)
+- [ ] All new `.sas` files include the required header block
+  (`Purpose:`, `Inputs:`, `Outputs:`, `Usage:`)
 - [ ] No hardcoded absolute `libname` paths
 - [ ] No risky shell-execution patterns (`x` command, `systask`, `filename pipe`)
 - [ ] SASPy / Viya credentials read from environment — no secrets in code

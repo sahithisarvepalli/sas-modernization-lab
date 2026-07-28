@@ -5,7 +5,7 @@
 The lab follows a layered architecture that mirrors real SAS production
 environments while keeping the open-source toolchain self-contained.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                  VS Code Dev Container                   │
 │  ┌─────────────┐  ┌───────────────┐  ┌───────────────┐  │
@@ -24,7 +24,7 @@ environments while keeping the open-source toolchain self-contained.
 ## Connection modes
 
 | Mode | Package | Use case |
-|------|---------|---------|
+| ---- | ------- | -------- |
 | IOM | `saspy` | Traditional SAS Workspace Server, on-prem or SAS Grid |
 | HTTP | `saspy` | SAS Viya Compute Service over HTTPS |
 | CAS | `python-swat` | SAS Viya in-memory analytics (Cloud Analytic Services) |
@@ -51,8 +51,7 @@ See `config/sascfg_personal.py.example` for the full template.
 GitHub Actions enforce three independent workflows on every push and PR:
 
 | Workflow | What it checks |
-|----------|---------------|
+| -------- | -------------- |
 | `ci.yml` | Python lint (Ruff), tests (pytest), pre-commit hooks |
 | `sas-static-checks.yml` | SAS header completeness, absolute `libname` paths, risky shell patterns |
 | `repo-guardrails.yml` | Required folder/file structure, secret-pattern scan |
-
