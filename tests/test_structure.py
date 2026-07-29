@@ -12,11 +12,19 @@ REQUIRED_PATHS = [
     "docs/OPERATIONS_RUNBOOK.md",
     "docs/ROADMAP.md",
     "docs/BRANCHING_STRATEGY.md",
-    "src/macros/logging.sas",
-    "src/macros/validation.sas",
-    "src/sas/module_a_advanced_core/main.sas",
-    "src/sas/module_b_modernization_simulation/main.sas",
-    "src/sas/module_c_api_reporting/main.sas",
+    # SAS library files — reusable macros and module examples
+    "sas_code/macros/logging.sas",
+    "sas_code/macros/validation.sas",
+    "sas_code/modules/module_a_advanced_core/main.sas",
+    "sas_code/modules/module_b_modernization_simulation/main.sas",
+    "sas_code/modules/module_c_api_reporting/main.sas",
+    # Healthcare ACA pipeline stages
+    "sas_code/00_config_and_macros.sas",
+    "sas_code/01_data_ingestion.sas",
+    "sas_code/02_data_cleaning.sas",
+    "sas_code/03_aca_business_logic.sas",
+    "sas_code/04_ods_reporting.sas",
+    # Python interop layer (src/ is Python-only)
     "src/python/interop_entry.py",
     "config/.env.example",
 ]

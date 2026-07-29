@@ -18,7 +18,11 @@ RISKY_EXECUTION_PATTERNS = {
 
 
 def main() -> int:
-    sas_files = sorted(Path("src").rglob("*.sas"))
+    # Only scan SAS library files (macros and modules) — these require
+    # structured documentation headers. Pipeline stage programs (00-04)
+    # use a different block-comment convention and are excluded here.
+    sas_dirs = [Path("sas_code/macros"), Path("sas_code/modules")]
+    sas_files = sorted(f for d in sas_dirs if d.exists() for f in d.rglob("*.sas"))
     violations: list[str] = []
 
     for path in sas_files:
