@@ -12,3 +12,9 @@ pandas>=2.0.0
 numpy>=1.26.0
 # HTTP client for SAS Viya REST API workflows
 requests>=2.31.0
+# Jupyter ecosystem for saspy_execution.ipynb interactive notebook
+jupyterlab>=4.0.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+# Charting for notebook visualizations
+matplotlib>=3.7.0

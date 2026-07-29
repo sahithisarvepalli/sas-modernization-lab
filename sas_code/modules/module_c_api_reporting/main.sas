@@ -2,9 +2,9 @@
 Purpose: Bootstrap API-driven reporting patterns with a safe PROC HTTP example.
 Inputs: Endpoint URL provided by configuration and report output destinations.
 Outputs: Placeholder response handling and reporting checkpoints.
-Usage: %include "src/macros/logging.sas"; %include "src/sas/module_c_api_reporting/main.sas";
+Usage: %include "sas_code/macros/logging.sas"; %include "sas_code/modules/module_c_api_reporting/main.sas";
 */
-%include "src/macros/logging.sas";
+%include "sas_code/macros/logging.sas";
 
 %log_message(message=Module C API reporting started, severity=INFO, module_name=module_c_api_reporting);
 
